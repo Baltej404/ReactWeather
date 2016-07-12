@@ -3,7 +3,7 @@ var React = require('react');
 var About = (props) => {
   return (
     <div>
-      <h1 className="text-center">Welcome To About</h1>
+      <h1 className="text-center page-title">Welcome To About</h1>
         <p>This is the about us page and will give you the temperture of a given location</p>
         <p>Here are some of the tools to use:</p>
         <ul>
