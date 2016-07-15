@@ -1,5 +1,5 @@
 var webpack = require('webpack');
-
+const path = require('path')
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
@@ -22,16 +22,16 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Nav.jsx',
-      Weather: 'app/components/Weather.jsx',
-      WeatherForm: 'app/components/WeatherForm.jsx',
-      WeatherMessage: 'app/components/WeatherMessage.jsx',
-      About: 'app/components/About.jsx',
-      Examples: 'app/components/Examples.jsx',
-      openWeatherMap: 'app/api/openWeatherMap.jsx',
-      ErrorModal: 'app/components/ErrorModal.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      Main: path.resolve(process.cwd(),'app/components/Main.jsx'),
+      Nav: path.resolve(process.cwd(),'app/components/Nav.jsx'),
+      Weather:path.resolve(process.cwd(),'app/components/Weather.jsx'),
+      WeatherForm: path.resolve(process.cwd(),'app/components/WeatherForm.jsx'),
+      WeatherMessage: path.resolve(process.cwd(),'app/components/WeatherMessage.jsx'),
+      About: path.resolve(process.cwd(),'app/components/About.jsx'),
+      Examples: path.resolve(process.cwd(),'app/components/Examples.jsx'),
+      openWeatherMap: path.resolve(process.cwd(),'app/api/openWeatherMap.jsx'),
+      ErrorModal: path.resolve(process.cwd(),'app/components/ErrorModal.jsx'),
+      applicationStyles: path.resolve(process.cwd(),'app/styles/app.scss')
     },
     extensions: ['', '.js', '.jsx']
   },
